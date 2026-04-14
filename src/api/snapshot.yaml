@@ -1,0 +1,2701 @@
+{
+  "data": {
+    "version": 1,
+    "directus": "11.17.1",
+    "vendor": "postgres",
+    "collections": [
+      {
+        "collection": "Card",
+        "meta": {
+          "accountability": "all",
+          "archive_app_filter": true,
+          "archive_field": "status",
+          "archive_value": "archived",
+          "collapse": "open",
+          "collection": "Card",
+          "color": null,
+          "display_template": null,
+          "group": null,
+          "hidden": false,
+          "icon": null,
+          "item_duplication_fields": null,
+          "note": null,
+          "preview_url": null,
+          "singleton": false,
+          "sort": null,
+          "sort_field": "sort",
+          "translations": null,
+          "unarchive_value": "draft",
+          "versioning": false
+        },
+        "schema": {
+          "name": "Card"
+        }
+      },
+      {
+        "collection": "Card_files",
+        "meta": {
+          "accountability": "all",
+          "archive_app_filter": true,
+          "archive_field": null,
+          "archive_value": null,
+          "collapse": "open",
+          "collection": "Card_files",
+          "color": null,
+          "display_template": null,
+          "group": null,
+          "hidden": true,
+          "icon": "import_export",
+          "item_duplication_fields": null,
+          "note": null,
+          "preview_url": null,
+          "singleton": false,
+          "sort": null,
+          "sort_field": null,
+          "translations": null,
+          "unarchive_value": null,
+          "versioning": false
+        },
+        "schema": {
+          "name": "Card_files"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "meta": {
+          "accountability": "all",
+          "archive_app_filter": true,
+          "archive_field": "status",
+          "archive_value": "archived",
+          "collapse": "open",
+          "collection": "Catalog",
+          "color": null,
+          "display_template": null,
+          "group": null,
+          "hidden": false,
+          "icon": null,
+          "item_duplication_fields": null,
+          "note": null,
+          "preview_url": null,
+          "singleton": false,
+          "sort": null,
+          "sort_field": "sort",
+          "translations": null,
+          "unarchive_value": "draft",
+          "versioning": false
+        },
+        "schema": {
+          "name": "Catalog"
+        }
+      },
+      {
+        "collection": "Catalog_Card",
+        "meta": {
+          "accountability": "all",
+          "archive_app_filter": true,
+          "archive_field": null,
+          "archive_value": null,
+          "collapse": "open",
+          "collection": "Catalog_Card",
+          "color": null,
+          "display_template": null,
+          "group": null,
+          "hidden": true,
+          "icon": "import_export",
+          "item_duplication_fields": null,
+          "note": null,
+          "preview_url": null,
+          "singleton": false,
+          "sort": null,
+          "sort_field": null,
+          "translations": null,
+          "unarchive_value": null,
+          "versioning": false
+        },
+        "schema": {
+          "name": "Catalog_Card"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "meta": {
+          "accountability": "all",
+          "archive_app_filter": true,
+          "archive_field": "status",
+          "archive_value": "archived",
+          "collapse": "open",
+          "collection": "SharedLinks",
+          "color": null,
+          "display_template": null,
+          "group": null,
+          "hidden": false,
+          "icon": null,
+          "item_duplication_fields": null,
+          "note": null,
+          "preview_url": null,
+          "singleton": false,
+          "sort": null,
+          "sort_field": null,
+          "translations": null,
+          "unarchive_value": "draft",
+          "versioning": false
+        },
+        "schema": {
+          "name": "SharedLinks"
+        }
+      },
+      {
+        "collection": "SharedLinks_Catalog",
+        "meta": {
+          "accountability": "all",
+          "archive_app_filter": true,
+          "archive_field": null,
+          "archive_value": null,
+          "collapse": "open",
+          "collection": "SharedLinks_Catalog",
+          "color": null,
+          "display_template": null,
+          "group": null,
+          "hidden": true,
+          "icon": "import_export",
+          "item_duplication_fields": [
+            "Catalog_id.name"
+          ],
+          "note": null,
+          "preview_url": null,
+          "singleton": false,
+          "sort": null,
+          "sort_field": null,
+          "translations": null,
+          "unarchive_value": null,
+          "versioning": false
+        },
+        "schema": {
+          "name": "SharedLinks_Catalog"
+        }
+      }
+    ],
+    "fields": [
+      {
+        "collection": "Card",
+        "field": "id",
+        "type": "uuid",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "id",
+          "group": null,
+          "hidden": true,
+          "interface": "input",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 1,
+          "special": [
+            "uuid"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "id",
+          "table": "Card",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": false,
+          "is_unique": true,
+          "is_indexed": false,
+          "is_primary_key": true,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "status",
+        "type": "string",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": "labels",
+          "display_options": {
+            "choices": [
+              {
+                "background": "var(--theme--primary-background)",
+                "color": "var(--theme--primary)",
+                "foreground": "var(--theme--primary)",
+                "text": "$t:published",
+                "value": "published"
+              },
+              {
+                "background": "var(--theme--background-normal)",
+                "color": "var(--theme--foreground)",
+                "foreground": "var(--theme--foreground)",
+                "text": "$t:draft",
+                "value": "draft"
+              },
+              {
+                "background": "var(--theme--warning-background)",
+                "color": "var(--theme--warning)",
+                "foreground": "var(--theme--warning)",
+                "text": "$t:archived",
+                "value": "archived"
+              }
+            ],
+            "showAsDot": true
+          },
+          "field": "status",
+          "group": null,
+          "hidden": false,
+          "interface": "select-dropdown",
+          "note": null,
+          "options": {
+            "choices": [
+              {
+                "color": "var(--theme--primary)",
+                "text": "$t:published",
+                "value": "published"
+              },
+              {
+                "color": "var(--theme--foreground)",
+                "text": "$t:draft",
+                "value": "draft"
+              },
+              {
+                "color": "var(--theme--warning)",
+                "text": "$t:archived",
+                "value": "archived"
+              }
+            ]
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 2,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "status",
+          "table": "Card",
+          "data_type": "character varying",
+          "default_value": "draft",
+          "max_length": 255,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": false,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "sort",
+        "type": "integer",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "sort",
+          "group": null,
+          "hidden": true,
+          "interface": "input",
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 3,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "sort",
+          "table": "Card",
+          "data_type": "integer",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "user_created",
+        "type": "uuid",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": "user",
+          "display_options": null,
+          "field": "user_created",
+          "group": null,
+          "hidden": true,
+          "interface": "select-dropdown-m2o",
+          "note": null,
+          "options": {
+            "template": "{{avatar}} {{first_name}} {{last_name}}"
+          },
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 4,
+          "special": [
+            "user-created"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "user_created",
+          "table": "Card",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "date_created",
+        "type": "timestamp",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": "datetime",
+          "display_options": {
+            "relative": true
+          },
+          "field": "date_created",
+          "group": null,
+          "hidden": true,
+          "interface": "datetime",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 5,
+          "special": [
+            "date-created"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "date_created",
+          "table": "Card",
+          "data_type": "timestamp with time zone",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "user_updated",
+        "type": "uuid",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": "user",
+          "display_options": null,
+          "field": "user_updated",
+          "group": null,
+          "hidden": true,
+          "interface": "select-dropdown-m2o",
+          "note": null,
+          "options": {
+            "template": "{{avatar}} {{first_name}} {{last_name}}"
+          },
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 6,
+          "special": [
+            "user-updated"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "user_updated",
+          "table": "Card",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "date_updated",
+        "type": "timestamp",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": "datetime",
+          "display_options": {
+            "relative": true
+          },
+          "field": "date_updated",
+          "group": null,
+          "hidden": true,
+          "interface": "datetime",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 7,
+          "special": [
+            "date-updated"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "date_updated",
+          "table": "Card",
+          "data_type": "timestamp with time zone",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "name",
+        "type": "string",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "name",
+          "group": null,
+          "hidden": false,
+          "interface": "input",
+          "note": null,
+          "options": {
+            "placeholder": "Название карточки"
+          },
+          "readonly": false,
+          "required": true,
+          "searchable": true,
+          "sort": 8,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "name",
+          "table": "Card",
+          "data_type": "character varying",
+          "default_value": null,
+          "max_length": 255,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "price",
+        "type": "integer",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "price",
+          "group": null,
+          "hidden": false,
+          "interface": "input",
+          "note": null,
+          "options": {
+            "min": 0,
+            "placeholder": "Стоимость"
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 9,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "price",
+          "table": "Card",
+          "data_type": "integer",
+          "default_value": 0,
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "image",
+        "type": "uuid",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "image",
+          "group": null,
+          "hidden": false,
+          "interface": "file-image",
+          "note": null,
+          "options": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/gif",
+              "image/webp",
+              "image/svg+xml",
+              "image/avif",
+              "image/tiff"
+            ],
+            "crop": false
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 11,
+          "special": [
+            "file"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "image",
+          "table": "Card",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "description",
+        "type": "text",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "description",
+          "group": null,
+          "hidden": false,
+          "interface": "input",
+          "note": null,
+          "options": {
+            "placeholder": "Описание товара "
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 12,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "description",
+          "table": "Card",
+          "data_type": "text",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "video",
+        "type": "uuid",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "video",
+          "group": null,
+          "hidden": false,
+          "interface": "file",
+          "note": null,
+          "options": {
+            "allowedMimeTypes": [
+              "video/*"
+            ]
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 13,
+          "special": [
+            "file"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "video",
+          "table": "Card",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "price_end",
+        "type": "integer",
+        "meta": {
+          "collection": "Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "price_end",
+          "group": null,
+          "hidden": false,
+          "interface": "input",
+          "note": null,
+          "options": {
+            "min": 0,
+            "placeholder": "Стоимость"
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 10,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "price_end",
+          "table": "Card",
+          "data_type": "integer",
+          "default_value": 0,
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card_files",
+        "field": "id",
+        "type": "integer",
+        "meta": {
+          "collection": "Card_files",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 1,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "id",
+          "table": "Card_files",
+          "data_type": "integer",
+          "default_value": "nextval('\"Card_files_id_seq\"'::regclass)",
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": false,
+          "is_unique": true,
+          "is_indexed": false,
+          "is_primary_key": true,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": true,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card_files",
+        "field": "Card_id",
+        "type": "uuid",
+        "meta": {
+          "collection": "Card_files",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "Card_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 2,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "Card_id",
+          "table": "Card_files",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Card_files",
+        "field": "directus_files_id",
+        "type": "uuid",
+        "meta": {
+          "collection": "Card_files",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "directus_files_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 3,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "directus_files_id",
+          "table": "Card_files",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "id",
+        "type": "uuid",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "id",
+          "group": null,
+          "hidden": true,
+          "interface": "input",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 1,
+          "special": [
+            "uuid"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "id",
+          "table": "Catalog",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": false,
+          "is_unique": true,
+          "is_indexed": false,
+          "is_primary_key": true,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "status",
+        "type": "string",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": "labels",
+          "display_options": {
+            "choices": [
+              {
+                "background": "var(--theme--primary-background)",
+                "color": "var(--theme--primary)",
+                "foreground": "var(--theme--primary)",
+                "text": "$t:published",
+                "value": "published"
+              },
+              {
+                "background": "var(--theme--background-normal)",
+                "color": "var(--theme--foreground)",
+                "foreground": "var(--theme--foreground)",
+                "text": "$t:draft",
+                "value": "draft"
+              },
+              {
+                "background": "var(--theme--warning-background)",
+                "color": "var(--theme--warning)",
+                "foreground": "var(--theme--warning)",
+                "text": "$t:archived",
+                "value": "archived"
+              }
+            ],
+            "showAsDot": true
+          },
+          "field": "status",
+          "group": null,
+          "hidden": false,
+          "interface": "select-dropdown",
+          "note": null,
+          "options": {
+            "choices": [
+              {
+                "color": "var(--theme--primary)",
+                "text": "$t:published",
+                "value": "published"
+              },
+              {
+                "color": "var(--theme--foreground)",
+                "text": "$t:draft",
+                "value": "draft"
+              },
+              {
+                "color": "var(--theme--warning)",
+                "text": "$t:archived",
+                "value": "archived"
+              }
+            ]
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 2,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "status",
+          "table": "Catalog",
+          "data_type": "character varying",
+          "default_value": "draft",
+          "max_length": 255,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": false,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "sort",
+        "type": "integer",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "sort",
+          "group": null,
+          "hidden": true,
+          "interface": "input",
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 3,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "sort",
+          "table": "Catalog",
+          "data_type": "integer",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "user_created",
+        "type": "uuid",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": "user",
+          "display_options": null,
+          "field": "user_created",
+          "group": null,
+          "hidden": true,
+          "interface": "select-dropdown-m2o",
+          "note": null,
+          "options": {
+            "template": "{{avatar}} {{first_name}} {{last_name}}"
+          },
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 4,
+          "special": [
+            "user-created"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "user_created",
+          "table": "Catalog",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "date_created",
+        "type": "timestamp",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": "datetime",
+          "display_options": {
+            "relative": true
+          },
+          "field": "date_created",
+          "group": null,
+          "hidden": true,
+          "interface": "datetime",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 5,
+          "special": [
+            "date-created"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "date_created",
+          "table": "Catalog",
+          "data_type": "timestamp with time zone",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "user_updated",
+        "type": "uuid",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": "user",
+          "display_options": null,
+          "field": "user_updated",
+          "group": null,
+          "hidden": true,
+          "interface": "select-dropdown-m2o",
+          "note": null,
+          "options": {
+            "template": "{{avatar}} {{first_name}} {{last_name}}"
+          },
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 6,
+          "special": [
+            "user-updated"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "user_updated",
+          "table": "Catalog",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "date_updated",
+        "type": "timestamp",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": "datetime",
+          "display_options": {
+            "relative": true
+          },
+          "field": "date_updated",
+          "group": null,
+          "hidden": true,
+          "interface": "datetime",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 7,
+          "special": [
+            "date-updated"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "date_updated",
+          "table": "Catalog",
+          "data_type": "timestamp with time zone",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "catalog_card",
+        "type": "alias",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "catalog_card",
+          "group": null,
+          "hidden": false,
+          "interface": "list-m2m",
+          "note": null,
+          "options": {
+            "layout": "table",
+            "tableSpacing": "compact"
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 9,
+          "special": [
+            "m2m"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "name",
+        "type": "string",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "name",
+          "group": null,
+          "hidden": false,
+          "interface": "input",
+          "note": null,
+          "options": {
+            "placeholder": "Название каталога"
+          },
+          "readonly": false,
+          "required": true,
+          "searchable": true,
+          "sort": 8,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "name",
+          "table": "Catalog",
+          "data_type": "character varying",
+          "default_value": null,
+          "max_length": 255,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "backround",
+        "type": "uuid",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "backround",
+          "group": null,
+          "hidden": false,
+          "interface": "file-image",
+          "note": null,
+          "options": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/gif",
+              "image/webp",
+              "image/svg+xml",
+              "image/avif",
+              "image/tiff"
+            ]
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 10,
+          "special": [
+            "file"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "backround",
+          "table": "Catalog",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "image",
+        "type": "uuid",
+        "meta": {
+          "collection": "Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "image",
+          "group": null,
+          "hidden": false,
+          "interface": "file-image",
+          "note": null,
+          "options": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/gif",
+              "image/webp",
+              "image/svg+xml",
+              "image/avif",
+              "image/tiff"
+            ]
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 11,
+          "special": [
+            "file"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "image",
+          "table": "Catalog",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Catalog_Card",
+        "field": "id",
+        "type": "integer",
+        "meta": {
+          "collection": "Catalog_Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 1,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "id",
+          "table": "Catalog_Card",
+          "data_type": "integer",
+          "default_value": "nextval('\"Catalog_Card_id_seq\"'::regclass)",
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": false,
+          "is_unique": true,
+          "is_indexed": false,
+          "is_primary_key": true,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": true,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "Catalog_Card",
+        "field": "Catalog_id",
+        "type": "uuid",
+        "meta": {
+          "collection": "Catalog_Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "Catalog_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 2,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "Catalog_id",
+          "table": "Catalog_Card",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "Catalog",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "Catalog_Card",
+        "field": "Card_id",
+        "type": "uuid",
+        "meta": {
+          "collection": "Catalog_Card",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "Card_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 3,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "Card_id",
+          "table": "Catalog_Card",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "Card",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "id",
+        "type": "uuid",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "id",
+          "group": null,
+          "hidden": true,
+          "interface": "input",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 1,
+          "special": [
+            "uuid"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "id",
+          "table": "SharedLinks",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": false,
+          "is_unique": true,
+          "is_indexed": false,
+          "is_primary_key": true,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "status",
+        "type": "string",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": "labels",
+          "display_options": {
+            "choices": [
+              {
+                "background": "var(--theme--primary-background)",
+                "color": "var(--theme--primary)",
+                "foreground": "var(--theme--primary)",
+                "text": "$t:published",
+                "value": "published"
+              },
+              {
+                "background": "var(--theme--background-normal)",
+                "color": "var(--theme--foreground)",
+                "foreground": "var(--theme--foreground)",
+                "text": "$t:draft",
+                "value": "draft"
+              },
+              {
+                "background": "var(--theme--warning-background)",
+                "color": "var(--theme--warning)",
+                "foreground": "var(--theme--warning)",
+                "text": "$t:archived",
+                "value": "archived"
+              }
+            ],
+            "showAsDot": true
+          },
+          "field": "status",
+          "group": null,
+          "hidden": false,
+          "interface": "select-dropdown",
+          "note": null,
+          "options": {
+            "choices": [
+              {
+                "color": "var(--theme--primary)",
+                "text": "$t:published",
+                "value": "published"
+              },
+              {
+                "color": "var(--theme--foreground)",
+                "text": "$t:draft",
+                "value": "draft"
+              },
+              {
+                "color": "var(--theme--warning)",
+                "text": "$t:archived",
+                "value": "archived"
+              }
+            ]
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 2,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "status",
+          "table": "SharedLinks",
+          "data_type": "character varying",
+          "default_value": "draft",
+          "max_length": 255,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": false,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "user_created",
+        "type": "uuid",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": "user",
+          "display_options": null,
+          "field": "user_created",
+          "group": null,
+          "hidden": true,
+          "interface": "select-dropdown-m2o",
+          "note": null,
+          "options": {
+            "template": "{{avatar}} {{first_name}} {{last_name}}"
+          },
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 3,
+          "special": [
+            "user-created"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "user_created",
+          "table": "SharedLinks",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "date_created",
+        "type": "timestamp",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": "datetime",
+          "display_options": {
+            "relative": true
+          },
+          "field": "date_created",
+          "group": null,
+          "hidden": true,
+          "interface": "datetime",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 4,
+          "special": [
+            "date-created"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "date_created",
+          "table": "SharedLinks",
+          "data_type": "timestamp with time zone",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "user_updated",
+        "type": "uuid",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": "user",
+          "display_options": null,
+          "field": "user_updated",
+          "group": null,
+          "hidden": true,
+          "interface": "select-dropdown-m2o",
+          "note": null,
+          "options": {
+            "template": "{{avatar}} {{first_name}} {{last_name}}"
+          },
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 5,
+          "special": [
+            "user-updated"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "user_updated",
+          "table": "SharedLinks",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "date_updated",
+        "type": "timestamp",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": "datetime",
+          "display_options": {
+            "relative": true
+          },
+          "field": "date_updated",
+          "group": null,
+          "hidden": true,
+          "interface": "datetime",
+          "note": null,
+          "options": null,
+          "readonly": true,
+          "required": false,
+          "searchable": true,
+          "sort": 6,
+          "special": [
+            "date-updated"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "half"
+        },
+        "schema": {
+          "name": "date_updated",
+          "table": "SharedLinks",
+          "data_type": "timestamp with time zone",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "expiration",
+        "type": "dateTime",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "expiration",
+          "group": null,
+          "hidden": false,
+          "interface": "datetime",
+          "note": null,
+          "options": {
+            "relative": true,
+            "strict": true
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 8,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "expiration",
+          "table": "SharedLinks",
+          "data_type": "timestamp without time zone",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "links_catalog",
+        "type": "alias",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "links_catalog",
+          "group": null,
+          "hidden": false,
+          "interface": "list-m2m",
+          "note": null,
+          "options": {
+            "layout": "table"
+          },
+          "readonly": false,
+          "required": true,
+          "searchable": true,
+          "sort": 9,
+          "special": [
+            "m2m"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "name",
+        "type": "string",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "name",
+          "group": null,
+          "hidden": false,
+          "interface": "input",
+          "note": null,
+          "options": {
+            "placeholder": "Название магазина"
+          },
+          "readonly": false,
+          "required": true,
+          "searchable": true,
+          "sort": 7,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "name",
+          "table": "SharedLinks",
+          "data_type": "character varying",
+          "default_value": null,
+          "max_length": 255,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "backround",
+        "type": "uuid",
+        "meta": {
+          "collection": "SharedLinks",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "backround",
+          "group": null,
+          "hidden": false,
+          "interface": "file-image",
+          "note": null,
+          "options": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/gif",
+              "image/webp",
+              "image/svg+xml",
+              "image/avif",
+              "image/tiff"
+            ]
+          },
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 10,
+          "special": [
+            "file"
+          ],
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "backround",
+          "table": "SharedLinks",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "SharedLinks_Catalog",
+        "field": "id",
+        "type": "integer",
+        "meta": {
+          "collection": "SharedLinks_Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 1,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "id",
+          "table": "SharedLinks_Catalog",
+          "data_type": "integer",
+          "default_value": "nextval('\"SharedLinks_Catalog_id_seq\"'::regclass)",
+          "max_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "is_nullable": false,
+          "is_unique": true,
+          "is_indexed": false,
+          "is_primary_key": true,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": true,
+          "foreign_key_table": null,
+          "foreign_key_column": null
+        }
+      },
+      {
+        "collection": "SharedLinks_Catalog",
+        "field": "SharedLinks_id",
+        "type": "uuid",
+        "meta": {
+          "collection": "SharedLinks_Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "SharedLinks_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 2,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "SharedLinks_id",
+          "table": "SharedLinks_Catalog",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "SharedLinks",
+          "foreign_key_column": "id"
+        }
+      },
+      {
+        "collection": "SharedLinks_Catalog",
+        "field": "Catalog_id",
+        "type": "uuid",
+        "meta": {
+          "collection": "SharedLinks_Catalog",
+          "conditions": null,
+          "display": null,
+          "display_options": null,
+          "field": "Catalog_id",
+          "group": null,
+          "hidden": true,
+          "interface": null,
+          "note": null,
+          "options": null,
+          "readonly": false,
+          "required": false,
+          "searchable": true,
+          "sort": 3,
+          "special": null,
+          "translations": null,
+          "validation": null,
+          "validation_message": null,
+          "width": "full"
+        },
+        "schema": {
+          "name": "Catalog_id",
+          "table": "SharedLinks_Catalog",
+          "data_type": "uuid",
+          "default_value": null,
+          "max_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "is_nullable": true,
+          "is_unique": false,
+          "is_indexed": false,
+          "is_primary_key": false,
+          "is_generated": false,
+          "generation_expression": null,
+          "has_auto_increment": false,
+          "foreign_key_table": "Catalog",
+          "foreign_key_column": "id"
+        }
+      }
+    ],
+    "systemFields": [
+      {
+        "collection": "directus_activity",
+        "field": "timestamp",
+        "schema": {
+          "is_indexed": true
+        }
+      },
+      {
+        "collection": "directus_revisions",
+        "field": "activity",
+        "schema": {
+          "is_indexed": true
+        }
+      },
+      {
+        "collection": "directus_revisions",
+        "field": "parent",
+        "schema": {
+          "is_indexed": true
+        }
+      }
+    ],
+    "relations": [
+      {
+        "collection": "Card",
+        "field": "user_created",
+        "related_collection": "directus_users",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "Card",
+          "many_field": "user_created",
+          "one_allowed_collections": null,
+          "one_collection": "directus_users",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Card",
+          "column": "user_created",
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id",
+          "constraint_name": "card_user_created_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "user_updated",
+        "related_collection": "directus_users",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "Card",
+          "many_field": "user_updated",
+          "one_allowed_collections": null,
+          "one_collection": "directus_users",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Card",
+          "column": "user_updated",
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id",
+          "constraint_name": "card_user_updated_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "image",
+        "related_collection": "directus_files",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "Card",
+          "many_field": "image",
+          "one_allowed_collections": null,
+          "one_collection": "directus_files",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Card",
+          "column": "image",
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id",
+          "constraint_name": "card_image_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "Card",
+        "field": "video",
+        "related_collection": "directus_files",
+        "meta": {
+          "junction_field": "Card_id",
+          "many_collection": "Card",
+          "many_field": "video",
+          "one_allowed_collections": null,
+          "one_collection": "directus_files",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Card",
+          "column": "video",
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id",
+          "constraint_name": "card_video_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "user_created",
+        "related_collection": "directus_users",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "Catalog",
+          "many_field": "user_created",
+          "one_allowed_collections": null,
+          "one_collection": "directus_users",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Catalog",
+          "column": "user_created",
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id",
+          "constraint_name": "catalog_user_created_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "user_updated",
+        "related_collection": "directus_users",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "Catalog",
+          "many_field": "user_updated",
+          "one_allowed_collections": null,
+          "one_collection": "directus_users",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Catalog",
+          "column": "user_updated",
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id",
+          "constraint_name": "catalog_user_updated_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "backround",
+        "related_collection": "directus_files",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "Catalog",
+          "many_field": "backround",
+          "one_allowed_collections": null,
+          "one_collection": "directus_files",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Catalog",
+          "column": "backround",
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id",
+          "constraint_name": "catalog_backround_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "Catalog",
+        "field": "image",
+        "related_collection": "directus_files",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "Catalog",
+          "many_field": "image",
+          "one_allowed_collections": null,
+          "one_collection": "directus_files",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Catalog",
+          "column": "image",
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id",
+          "constraint_name": "catalog_image_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "Catalog_Card",
+        "field": "Card_id",
+        "related_collection": "Card",
+        "meta": {
+          "junction_field": "Catalog_id",
+          "many_collection": "Catalog_Card",
+          "many_field": "Card_id",
+          "one_allowed_collections": null,
+          "one_collection": "Card",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Catalog_Card",
+          "column": "Card_id",
+          "foreign_key_table": "Card",
+          "foreign_key_column": "id",
+          "constraint_name": "catalog_card_card_id_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "Catalog_Card",
+        "field": "Catalog_id",
+        "related_collection": "Catalog",
+        "meta": {
+          "junction_field": "Card_id",
+          "many_collection": "Catalog_Card",
+          "many_field": "Catalog_id",
+          "one_allowed_collections": null,
+          "one_collection": "Catalog",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": "catalog_card",
+          "sort_field": null
+        },
+        "schema": {
+          "table": "Catalog_Card",
+          "column": "Catalog_id",
+          "foreign_key_table": "Catalog",
+          "foreign_key_column": "id",
+          "constraint_name": "catalog_card_catalog_id_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "user_created",
+        "related_collection": "directus_users",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "SharedLinks",
+          "many_field": "user_created",
+          "one_allowed_collections": null,
+          "one_collection": "directus_users",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "SharedLinks",
+          "column": "user_created",
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id",
+          "constraint_name": "sharedlinks_user_created_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "user_updated",
+        "related_collection": "directus_users",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "SharedLinks",
+          "many_field": "user_updated",
+          "one_allowed_collections": null,
+          "one_collection": "directus_users",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "SharedLinks",
+          "column": "user_updated",
+          "foreign_key_table": "directus_users",
+          "foreign_key_column": "id",
+          "constraint_name": "sharedlinks_user_updated_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      },
+      {
+        "collection": "SharedLinks",
+        "field": "backround",
+        "related_collection": "directus_files",
+        "meta": {
+          "junction_field": null,
+          "many_collection": "SharedLinks",
+          "many_field": "backround",
+          "one_allowed_collections": null,
+          "one_collection": "directus_files",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "SharedLinks",
+          "column": "backround",
+          "foreign_key_table": "directus_files",
+          "foreign_key_column": "id",
+          "constraint_name": "sharedlinks_backround_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      },
+      {
+        "collection": "SharedLinks_Catalog",
+        "field": "Catalog_id",
+        "related_collection": "Catalog",
+        "meta": {
+          "junction_field": "SharedLinks_id",
+          "many_collection": "SharedLinks_Catalog",
+          "many_field": "Catalog_id",
+          "one_allowed_collections": null,
+          "one_collection": "Catalog",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": null,
+          "sort_field": null
+        },
+        "schema": {
+          "table": "SharedLinks_Catalog",
+          "column": "Catalog_id",
+          "foreign_key_table": "Catalog",
+          "foreign_key_column": "id",
+          "constraint_name": "sharedlinks_catalog_catalog_id_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      },
+      {
+        "collection": "SharedLinks_Catalog",
+        "field": "SharedLinks_id",
+        "related_collection": "SharedLinks",
+        "meta": {
+          "junction_field": "Catalog_id",
+          "many_collection": "SharedLinks_Catalog",
+          "many_field": "SharedLinks_id",
+          "one_allowed_collections": null,
+          "one_collection": "SharedLinks",
+          "one_collection_field": null,
+          "one_deselect_action": "nullify",
+          "one_field": "links_catalog",
+          "sort_field": null
+        },
+        "schema": {
+          "table": "SharedLinks_Catalog",
+          "column": "SharedLinks_id",
+          "foreign_key_table": "SharedLinks",
+          "foreign_key_column": "id",
+          "constraint_name": "sharedlinks_catalog_sharedlinks_id_foreign",
+          "on_update": "NO ACTION",
+          "on_delete": "SET NULL"
+        }
+      }
+    ]
+  }
+}
